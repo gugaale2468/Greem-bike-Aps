@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style type="text/css">
+   .container {
+                 width: 400px;
+                 margin: auto;
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-50%, -50%);
+                 padding: 20px;
+                 background-color:rgba(50, 44, 28, 0.766);
+                 border-radius: 5px;
+                 box-shadow: 0px 0px 20px rgb(194, 243, 1);
+ }
+  
+           h2 {
+
+                 margin-top: 0;
+                 color: rgb(170, 206, 22);
+                 text-align: center;
+                 font-size: 35px;
+                 font-style: italic;
+ }
+  
+        label {
+                 display: block;
+                 margin-bottom: 5px;
+                 color: rgb(170, 206, 22);
+ }
+  
+        input[type="text"],
+        input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+  }
+  
+        input[type="button"] {
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                display: flex;
+  }
+  
+        input[type="button"]:hover {
+                background-color: #3e8e41;
+                box-shadow: 0px 0px 20px rgb(194, 243, 1);
+  }
+  
+        .alert {
+                background-color: #f44336;
+                color: #fff;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                margin-top: 10px;
+                text-align: center;
+  }
+  
+      .success {
+                 background-color: #4CAF50;
+                 color: #fff;
+                 padding: 10px;
+                 margin-bottom: 10px;
+                 margin-top: 10px;
+                 border-radius: 5px;
+                 text-align: center;
+
+  }
+    </style>
+    <script>
+    function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+      
+        if (username == "" || password == "") {
+          document.getElementById("alert").innerHTML = "<p class='alert'>Por favor, preencha todos os campos.</p>";
+        } else {
+          document.getElementById("alert").innerHTML = "<p class='success'>Login bem sucedido.<br> Bem-vindo(a), " + username + "!</p>";
+        }
+      }
+      </script>
+</head>
+<body>
+    <nav id="menu-h">
+        <ul>
+          <div><a href="../index.html"><img src="../imagem/MiniLogoGB_SemFundo.png" alt="" width="7%"></a></div>
+          <li><a href="../paginas/nossasbikes.html">Nossas bikes</a></li>
+          <li><a href="../paginas/quemsomos.html">Quem somos</a></li>
+          <li><a href="../paginas/cadastrese.html">Cadastre-se</a></li>
+          <li><a href="../paginas/falecomnosco.html">Contato<a><li>
+          <li><a href="../paginas/entre.html">Entre</a></li>
+        </ul>
+    </nav> 
+    <div class="container">
+        <h2> Login</h2>
+        <form>
+          <label for="username">Usuário:</label>
+          <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário">
+    
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" placeholder="Digite sua senha" minlength="8">
+    
+          <input type="button" value="Entrar" onclick="validate()">
+        </form>
+    
+        <div id="alert"></div>
+      
+    </div>
+     
+   
+    </article>
+</body>
